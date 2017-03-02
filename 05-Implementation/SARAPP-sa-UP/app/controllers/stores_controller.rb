@@ -4,14 +4,17 @@ class StoresController < ApplicationController
   # GET /stores
   # GET /stores.json
   def index
+
+    # SEARCH STORE
     @stores = Store.all
-    @stores = Store.find_by_name(params[:Store_Name]) if params[:Store_name].present?
-    @store = Store.where(id: params[:id]) if params[:id].present?
+    #@stores = Store.find_by_name(params[:Store_Name]) if params[:Store_name].present?
+    #@store = Store.where(id: params[:id]) if params[:id].present?
     # Find By Id (For pagination, the 'where' statement result is Listing ActiveRecord::Relationship )
-    @stores = @stores.search(params[:search]) if params[:search].present?
+    @stores = @stores.search_store(params[:search]) if params[:search].present?
     # Search using Keyword
     #@stores = @stores.paginate(:page => params[:page], :per_page => 10)
     # Pagination
+
 
   end
 
