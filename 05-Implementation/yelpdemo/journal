@@ -1,0 +1,17 @@
+rails new yelpdemo
+rails generate controller Pages about contact
+edit about.html.erb and contact.html.erb
+edit application.html.erb
+rails g scaffold Restaurant name:string address:string phone:string website:string // generate migration
+rake db:migrate
+paste bootstrap code at application.html.erb
+update <table> tag to <table="table">
+create navbar
+create navbar partial and embed at application.html.erb
+EDIT RESTAURANT
+	add class="form-group" // optimum subspacing
+	add class: "form-control" // 100% width by default
+	add class: "btn btn-primary"
+	add class: "btn btn-link"
+	add class: "btn btn-link"
+add rails_12factor gem
